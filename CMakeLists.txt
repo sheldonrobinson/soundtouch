@@ -47,7 +47,7 @@ target_compile_options(SoundTouch PRIVATE ${COMPILE_OPTIONS})
 
 if(BUILD_SHARED_LIBS)
   set_target_properties(SoundTouch PROPERTIES
-    VERSION ${CMAKE_PROJECT_VERSION}
+    VERSION "${CMAKE_PROJECT_VERSION}"
   )
   if(WIN32)
     set_target_properties(SoundTouch PROPERTIES
@@ -55,7 +55,7 @@ if(BUILD_SHARED_LIBS)
     )
   else()
     set_target_properties(SoundTouch PROPERTIES
-      SOVERSION ${PROJECT_VERSION_MAJOR}
+      SOVERSION "${PROJECT_VERSION_MAJOR}"
     )
   endif()
 endif()
