@@ -140,8 +140,8 @@ option(SOUNDTOUCH_DLL "Build SoundTouchDLL C wrapper library" OFF)
 if(SOUNDTOUCH_DLL)
   add_library(SoundTouchDLL SHARED
     source/SoundTouchDLL/SoundTouchDLL.cpp
-    source/SoundTouchDLL/SoundTouchDLL.rc
   )
+  # source/SoundTouchDLL/SoundTouchDLL.rc
   set_target_properties(SoundTouch PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
   target_compile_options(SoundTouchDLL PRIVATE ${COMPILE_OPTIONS})
   set_target_properties(SoundTouchDLL PROPERTIES CXX_VISIBILITY_PRESET hidden)
